@@ -28,6 +28,9 @@ lowercase and removing numbers
 
 ## Model Architecture
 
+![model.png](model.png)
+
+
 - Photo Feature Extractor 
   - input photo features as vector of 4096 elements
   - 50% dropout
