@@ -25,3 +25,18 @@ top-down approach is their inability to capture minute details.
 - Clean the descriptions by removing 
 punctuations, converting all words to 
 lowercase and removing numbers 
+
+## Model Architecture
+
+- Photo Feature Extractor 
+  - input photo features as vector of 4096 elements
+  - 50% dropout
+- Sequence Processor
+  - input sequences of 34 words
+  - Embedding layer that used to ignore padding
+  - 50% dropout 
+  - LSTM with 256 memory units
+- Decoder
+  - Add both outputs from the two units
+  - Dense layer to make prediction of next word
+
