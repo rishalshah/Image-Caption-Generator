@@ -43,3 +43,36 @@ lowercase and removing numbers
   - Add both outputs from the two units
   - Dense layer to make prediction of next word
 
+## Final Model Hyperparameters
+
+|      Hyperparameter      |           Value          |
+|:------------------------:|:------------------------:|
+| Feature Extraction Model |           VGG16          |
+|          Epochs          |            10            |
+|          Dropout         |            0.5           |
+|        LSTM Layers       |            256           |
+|         Optimizer        |      adam (1.00E-03)     |
+|       Loss function      | categorical_crossentropy |
+
+## Results and Metrics
+
+Dropout = 0.5
+|       Model       | BLEU1 Score | BLEU2 Score | BLEU3 Score | BLEU4 Score |
+|:-----------------:|:-----------:|:-----------:|:-----------:|:-----------:|
+|       VGG16       |    0.565    |    0.3342   |    0.2377   |    0.164    |
+|       VGG19       |    0.5169   |    0.2554   |    0.1661   |    0.0932   |
+|    InceptionV3    |    0.5283   |    0.284    |    0.199    |    0.1003   |
+|      ResNet50     |    0.4533   |    0.1971   |    0.1322   |    0.0634   |
+| InceptionResNetV2 |    0.5059   |    0.2398   |    0.1634   |    0.0861   |
+
+Model = VGG16
+| Dropout | BLEU1 Score | BLEU2 Score | BLEU3 Score | BLEU4 Score |
+|:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
+|   0.25  |    0.4232   |    0.1988   |    0.0813   |    0.0312   |
+|   0.5   |    0.565    |    0.3342   |    0.2377   |    0.164    |
+|   0.75  |    0.5422   |    0.2994   |    0.1855   |    0.1449   |
+|  0.875  |    0.5239   |    0.281    |    0.1824   |    0.1253   |
+|    1    |    0.4911   |    0.2672   |    0.1693   |    0.1058   |
+
+
+
