@@ -63,8 +63,8 @@ Dropout = 0.5
 |       VGG19       |    0.5169   |    0.2554   |    0.1661   |    0.0932   |
 |    InceptionV3    |    0.5283   |    0.284    |    0.199    |    0.1003   |
 |      ResNet50     |    0.4533   |    0.1971   |    0.1322   |    0.0634   |
-| InceptionResNetV2 |    0.5059   |    0.2398   |    0.1634   |    0.0861   |
-
+| InceptionResNetV2 |    0.5059   |    0.2398   |    0.1634   |    0.0861   |  
+  
 Model = VGG16
 | Dropout | BLEU1 Score | BLEU2 Score | BLEU3 Score | BLEU4 Score |
 |:-------:|:-----------:|:-----------:|:-----------:|:-----------:|
@@ -74,5 +74,26 @@ Model = VGG16
 |  0.875  |    0.5239   |    0.281    |    0.1824   |    0.1253   |
 |    1    |    0.4911   |    0.2672   |    0.1693   |    0.1058   |
 
+## Generated Captions
 
+![Generated_Caption_1.png](Generated_Caption_1.png)  
+![Generated_Caption_2.png](Generated_Caption_2.png)
 
+## Comparison to Baseline
+
+|    Model    | RNN Model (by Marc Tanti et. al.) | Our Model (VGG16 + LSTM) | CNN model (by Moses et. al.) |
+|:-----------:|:---------------------------------:|:------------------------:|:----------------------------:|
+| BLEU1 Score |           0.401 to 0.578          |           0.565          |             ~0.61            |
+| BLEU2 Score |           0.176 to 0.390          |          0.3342          |             ~0.43            |
+| BLEU3 Score |           0.099 to 0.260          |          0.2377          |             ~0.39            |
+| BLEU4 Score |           0.059 to 0.170          |           0.164          |             0.244            |
+
+## Steps to run the code
+
+- Download the Flick8k dataset from the following links:
+  - [Flickr8k_Dataset.zip](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
+  - [Flickr8k_text.zip](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)  
+(Thanks to Dr. Jason Brownlee for the dataset links)
+
+- Extract the zip files and keep the dataset in the same folder as that of main.ipynb.
+- Make sure all required python packages are installed and then run main.ipynb to execute the program.
